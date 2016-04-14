@@ -1,0 +1,65 @@
+// code javascript du jeu clic balles
+$(function() {
+	init();
+});
+
+function init() {
+	
+	// STRUCTURES
+	
+	// titre
+	var titre = "<p>Cadet de Gassicourt : salé, sucré ou autre</p>";
+	document.getElementById("titre").innerHTML = titre;
+	// pied de page
+	var footer = "<p>TERESMA - carte test</p>";
+	document.getElementById("footer").innerHTML = footer;
+
+	// DONNEES
+
+
+	
+	// VARIABLES
+	var width = 500,
+    	height = 500;
+    svg = d3.select("#carte")
+    	.append("svg")
+    	.attr("width", width)
+    	.attr("height", height);
+    projection = d3.geo.conicConformal() // Lambert-93
+    	.center([2.454071, 47.279229]) // On centre la carte sur la France
+    	.scale(10000)
+    	.translate([500, -200]);
+ 
+	path = d3.geo.path()
+		.projection(projection);
+
+	g = svg.append("g");
+	
+	
+	// LANCEMENT
+	afficheCarte();
+
+	
+}
+
+
+function afficheCarte() {
+
+
+	d3.json("json/lieux.geojson", function(depts) {
+				svg.selectAll("path")
+					.data(depts.features)
+					.enter()
+					.append("path")
+					.attr("d", path)
+					.attr("class", "depts");
+			});
+
+}
+
+
+	
+	
+
+
+	

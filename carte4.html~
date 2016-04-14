@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>TERESMA lieux</title>
+		<script src="./js/jquery.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="./js/topojson.min.js"></script>
+		<script src="http://d3js.org/d3.geo.projection.v0.min.js" charset="utf-8"></script>
+		<script src="http://d3js.org/queue.v1.min.js"></script>
+		<script src="./js/code_carte4_05.js"></script>
+		<link rel="stylesheet" media="screen" href="./styles/styles_carte4.css" type="text/css"/>
+	</head>
+	
+	<body>
+	
+		<div id="Superposition_lieux">
+			<div id="titre"></div>
+			<div id="carte"></div>
+			<p>Catégories :</p>
+			<div id="liste"></div>
+		</div>
+		
+		<footer id="footer"></footer>
+		
+	</body>
+	
+</html>
