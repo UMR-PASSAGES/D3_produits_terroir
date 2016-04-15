@@ -1,9 +1,9 @@
 -----------------
 carte1.html
 -----------------
-Superposition des lieux avec aplats de couleur  
-Infobulle avec nombre de lieux superposés  
-zoom et pan avec souris  
+- Superposition des lieux avec aplats de couleur  
++ Infobulle avec nombre de lieux superposés  
+* zoom et pan avec souris  
 
 -----------------
 carte2.html
